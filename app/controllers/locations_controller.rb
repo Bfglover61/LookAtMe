@@ -8,7 +8,7 @@ class LocationsController < ApplicationController
         @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
         marker.lat location.latitude
         marker.lng location.longitude
-        #marker.marker location.message
+        marker.infowindow location.message
         end
   end
 
